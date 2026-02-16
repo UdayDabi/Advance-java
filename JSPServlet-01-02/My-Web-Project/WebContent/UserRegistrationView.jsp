@@ -7,11 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%@ include file="Header.jsp"%>
 	<div align="center">
-
+		<%
+		String msg = (String) request.getAttribute("msg");
+		%>
 		<form action="UserRegistrationCtl" method="post">
 			<h1>User Registration</h1>
+
+			<%
+			if (msg != null) {
+			%>
+			<h2><%=msg%></h2>
+			<%
+			}
+			%>
 			<table>
 				<tr>
 					<th>First Name</th>
@@ -46,6 +56,6 @@
 		</form>
 
 	</div>
-
+<%@ include file="Footer.jsp"%>
 </body>
 </html>
