@@ -64,41 +64,41 @@
 
 ------------------------------Alters-------------------------------------------------
 Add Primary Key
-1.ALTER TABLE table name ADD PRIMARY KEY (column_name);
+1.ALTER TABLE emp ADD PRIMARY KEY (id); // agar pele nahi bani to
 
 Drop Primary Key
-1.ALTER TABLE table_name DROP PRIMARY KEY;
-
-Add Foreign Key
-1.ALTER TABLE table_name ADD CONSTRAINT fk_name FOREIGN KEY (column_name) REFERENCES parent_table(parent_column);
-
-Drop Foreign Key
-1ALTER TABLE table_name DROP FOREIGN KEY fk_name;
+1.ALTER TABLE emp DROP PRIMARY KEY; // agar pele se bani to
 
 Add Column
-1.ALTER TABLE table_name ADD column_name datatype;
-2.ALTER TABLE department ADD location VARCHAR(50);
+1.ALTER TABLE emp ADD dept_id int;
+
+Add Foreign Key
+1.ALTER TABLE emp ADD  FOREIGN KEY (dept_id) REFERENCES deparment(id);
+
+Drop Foreign Key
+1.ALTER TABLE emp DROP FOREIGN KEY;
 
 Add Multiple Columns
-1.ALTER TABLE table_name ADD column1 datatype,ADD column2 datatype;
+1.ALTER TABLE emp ADD card_Id int , ADD number int;// do colum ek sath add krne ke liye
 
 Add Column at First
-1.ALTER TABLE table_name ADD column_name datatype FIRST;
+1.ALTER TABLE emp ADD Incentive  int FIRST; // sab se pele add kr de ga
 
 Add Column After Specific Column
-1.ALTER TABLE table_name ADD column_name datatype AFTER existing_column;
+1.ALTER TABLE emp ADD card_id int AFTER salary;
 
 Modify Column (datatype change)
-1.ALTER TABLE table_name MODIFY column_name new_datatype;
+1.ALTER TABLE emp modify salary long; // kisi datatype ko update krne ke liye
 
 Change Column Name + Datatype
-1.ALTER TABLE table_name CHANGE old_column_name new_column_name datatype;
+1.ALTER TABLE emp change salary salarys long; // Colum ka name change kr ne ke liye
 
 Drop (Delete) Column
 1.ALTER TABLE table_name DROP column_name;
 
 Rename Table
-1.ALTER TABLE old_table_name RENAME TO new_table_name;
+1.ALTER TABLE emp RENAME TO  employe;
+
 
 ------------------------ today -----------------------------------------------------
 
