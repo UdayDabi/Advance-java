@@ -51,7 +51,7 @@
 1. select * from employee inner join department on employee.dept_id = department.dept_id; (matching records only)
 2. select * from employee left join department on employee.dept_id = department.dept_id; (left table ke sab records right table ka matching records)
 3. select * from employee right join department on employee.dept_id = department.dept_id; (right table ke sab records left table ka matching records)
-4. select name, comapny, salary, deptName from employee left join department on employee.dept_id = department.id union select name, comapny, salary, deptName from employee right join department on employee.dept_id = department.id; (FULL OUTER JOIN – MySQL workaround)
+4. select name, company, salary, dept_name from employee left join department on employee.dept_id = department.dept_id union select name, company, salary, dept_name from employee right join department on employee.dept_id = department.dept_id; (FULL OUTER JOIN – MySQL workaround)
 
 ---
 
